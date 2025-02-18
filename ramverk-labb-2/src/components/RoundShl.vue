@@ -39,13 +39,12 @@ const nextRound = () => {
 }
 
 const getScore = (score, dateString, type) => {
-  if (score !== null && score !== undefined) return score // Visa resultat om matchen är spelad
+  if (score !== null && score !== undefined) return score
 
-  if (!dateString) return 'Ej tillgängligt' // Fallback om datum saknas
+  if (!dateString) return 'Ej tillgängligt'
 
   const date = new Date(dateString)
 
-  // Returnera datum eller tid beroende på typ
   return type === 'date'
     ? date.toLocaleDateString('sv-SE', { year: 'numeric', month: '2-digit', day: '2-digit' })
     : date.toLocaleTimeString('sv-SE', { hour: '2-digit', minute: '2-digit' })
