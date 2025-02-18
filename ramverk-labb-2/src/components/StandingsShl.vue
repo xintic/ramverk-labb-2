@@ -1,9 +1,10 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 import axios from 'axios'
 
 const standings = ref([])
 const sortDirection = ref({})
+const isMobile = ref(window.innerWidth < 576)
 
 const fetchStandings = async () => {
   try {
@@ -26,11 +27,22 @@ const sortTable = (key) => {
   })
 }
 
-onMounted(fetchStandings)
+const handleResize = () => {
+  isMobile.value = window.innerWidth < 576
+}
+
+onMounted(() => {
+  fetchStandings()
+  window.addEventListener('resize', handleResize)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('resize', handleResize)
+})
 </script>
 
 <template>
-  <table id="table-standings">
+  <table id="table-standings" class="table table-striped">
     <thead>
       <tr>
         <th @click="sortTable('rank')">Rank</th>
@@ -55,8 +67,8 @@ onMounted(fetchStandings)
             :alt="team.competitor.name"
             class="team-logo"
           />
-          <span class="team-name">{{ team.competitor.name }}</span>
-          <span class="team-abbreviation">{{ team.competitor.abbreviation }}</span>
+          <span v-if="!isMobile" class="team-name">{{ team.competitor.name }}</span>
+          <span v-else class="team-abbreviation">{{ team.competitor.abbreviation }}</span>
         </td>
         <td class="center">{{ team.played }}</td>
         <td class="center">{{ team.win }}</td>
@@ -71,7 +83,12 @@ onMounted(fetchStandings)
 </template>
 
 <style scoped>
+#table-standings th:hover {
+  cursor: pointer;
+}
 .team-logo {
-  height: 1.5em;
+  height: 2rem;
+  width: 2rem;
+  margin-right: 0.5rem;
 }
 </style>

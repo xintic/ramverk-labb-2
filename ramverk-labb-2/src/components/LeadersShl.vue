@@ -53,7 +53,7 @@ onMounted(fetchLeaders)
     <div class="leaders">
       <div v-for="(leaders, category) in leaderData" :key="category">
         <h3>{{ categoryLabels[category] }}</h3>
-        <table>
+        <table class="table table-striped">
           <thead>
             <tr>
               <th>Rank</th>

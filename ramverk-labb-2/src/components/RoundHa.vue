@@ -39,10 +39,16 @@ const nextRound = () => {
   }
 }
 
-const getScore = (score, dateString) => {
-  if (score !== null) return score
+const getScore = (score, dateString, type) => {
+  if (score !== null && score !== undefined) return score
+
+  if (!dateString) return 'Ej tillgängligt'
+
   const date = new Date(dateString)
-  return date.toLocaleDateString('sv-SE', { year: 'numeric', month: '2-digit', day: '2-digit' })
+
+  return type === 'date'
+    ? date.toLocaleDateString('sv-SE', { year: 'numeric', month: '2-digit', day: '2-digit' })
+    : date.toLocaleTimeString('sv-SE', { hour: '2-digit', minute: '2-digit' })
 }
 
 onMounted(fetchMatches)
@@ -77,7 +83,9 @@ onMounted(fetchMatches)
           />
           <div class="competitor-name">{{ match.sport_event.competitors[0].name }}</div>
           <div class="competitor-score">
-            {{ getScore(match.sport_event_status.home_score, match.sport_event.start_time) }}
+            {{
+              getScore(match.sport_event_status?.home_score, match.sport_event.start_time, 'date')
+            }}
           </div>
         </div>
         <div class="team away">
@@ -87,7 +95,9 @@ onMounted(fetchMatches)
           />
           <div class="competitor-name">{{ match.sport_event.competitors[1].name }}</div>
           <div class="competitor-score">
-            {{ getScore(match.sport_event_status.away_score, match.sport_event.start_time) }}
+            {{
+              getScore(match.sport_event_status?.away_score, match.sport_event.start_time, 'time')
+            }}
           </div>
         </div>
       </div>
