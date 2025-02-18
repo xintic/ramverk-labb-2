@@ -71,18 +71,15 @@ onMounted(fetchLeaders)
             </tr>
           </tbody>
         </table>
-        <button @click="showMore(category)" v-if="rowCounters[category] < maxRows">
+        <BButton @click="showMore(category)" v-if="rowCounters[category] < maxRows">
           Visa fler
-        </button>
+        </BButton>
       </div>
     </div>
   </div>
 </template>
 
 <style scoped>
-.leaders {
-  display: flex;
-}
 table {
   width: 100%;
   border-collapse: collapse;

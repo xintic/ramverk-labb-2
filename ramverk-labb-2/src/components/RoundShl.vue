@@ -1,7 +1,6 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import axios from 'axios'
-import { BButton } from 'bootstrap-vue-next'
 
 const rounds = ref([])
 const currentRoundIndex = ref(0)

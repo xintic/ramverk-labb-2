@@ -71,7 +71,9 @@ onMounted(fetchLeaders)
           </tr>
         </tbody>
       </table>
-      <button @click="showMore(category)" v-if="rowCounters[category] < maxRows">Visa fler</button>
+      <BButton @click="showMore(category)" v-if="rowCounters[category] < maxRows">
+        Visa fler
+      </BButton>
     </div>
   </div>
 </template>
