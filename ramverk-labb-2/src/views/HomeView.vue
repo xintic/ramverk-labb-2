@@ -9,15 +9,27 @@ import StandingsShl from '@/components/StandingsShl.vue'
 <template>
   <NavbarComponent />
   <CarouselComponent />
-  <section class="standings">
-    <StandingsShl />
-    <RoundShl />
+  <section id="standings">
+    <BContainer class="bv-example-row">
+      <BRow>
+        <BCol lg="8"><StandingsShl /></BCol>
+        <BCol lg="4"><RoundShl /></BCol>
+      </BRow>
+    </BContainer>
   </section>
-  <LeadersShl />
+  <section id="leaders">
+    <BContainer class="bv-example-row">
+      <BRow>
+        <BCol lg="12">
+          <LeadersShl />
+        </BCol>
+      </BRow>
+    </BContainer>
+  </section>
 </template>
 
 <style scoped>
-.standings {
+#standings {
   display: flex;
   justify-content: center;
 }

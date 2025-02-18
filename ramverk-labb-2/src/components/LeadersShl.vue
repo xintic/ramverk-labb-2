@@ -80,20 +80,8 @@ onMounted(fetchLeaders)
 </template>
 
 <style scoped>
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 20px;
-}
-th,
-td {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: left;
-}
-button {
-  margin-bottom: 20px;
-  padding: 8px 12px;
-  cursor: pointer;
+.leaders {
+  display: flex;
+  justify-content: space-evenly;
 }
 </style>
