@@ -54,7 +54,7 @@ onMounted(fetchMatches)
 </script>
 
 <template>
-  <div>
+  <div id="games">
     <div class="header-container">
       <BButton @click="prevRound" :disabled="currentRoundIndex === 0" variant="secondary">
         <i class="bi bi-arrow-left"></i>
@@ -69,7 +69,7 @@ onMounted(fetchMatches)
       </BButton>
     </div>
 
-    <div id="games">
+    <div>
       <div
         v-for="match in rounds[currentRoundIndex]?.matches"
         :key="match.sport_event.id"
@@ -109,6 +109,9 @@ onMounted(fetchMatches)
 </template>
 
 <style scoped>
+#games {
+  margin-top: 2.45rem;
+}
 .header-container {
   display: flex;
   align-items: center;
@@ -139,11 +142,5 @@ onMounted(fetchMatches)
 }
 .competitor-socre {
   display: flex;
-}
-.winner {
-  font-weight: 700;
-}
-.upcoming {
-  color: #888;
 }
 </style>
