@@ -42,10 +42,10 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <table id="table-standings" class="table table-striped">
+  <table id="table-standings" class="table table-striped table-sm">
     <thead>
       <tr>
-        <th @click="sortTable('rank')">Rank</th>
+        <th @click="sortTable('rank')">#</th>
         <th>Lag</th>
         <th @click="sortTable('played')">GP</th>
         <th @click="sortTable('win')">W</th>
@@ -90,5 +90,12 @@ onUnmounted(() => {
   height: 2rem;
   width: 2rem;
   margin-right: 0.5rem;
+}
+@media (max-width: 576px) {
+  .team-logo {
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-right: 0.5rem;
+  }
 }
 </style>

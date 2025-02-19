@@ -1,13 +1,10 @@
 <script setup>
-import LeadersShl from '@/components/LeadersShl.vue'
-import RoundShl from '@/components/RoundShl.vue'
-import StandingsShl from '@/components/StandingsShl.vue'
+import NavbarComponent from '@/components/NavbarComponent.vue'
 </script>
 
 <template>
-  <StandingsShl />
-  <RoundShl />
-  <LeadersShl />
+  <NavbarComponent />
+  <h1>:(</h1>
 </template>
 
 <style scoped></style>

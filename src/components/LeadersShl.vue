@@ -48,35 +48,44 @@ onMounted(fetchLeaders)
 </script>
 
 <template>
-  <div>
-    <h2>Topplistor</h2>
-    <div class="leaders">
-      <div v-for="(leaders, category) in leaderData" :key="category" class="table-leaders">
-        <h3>{{ categoryLabels[category] }}</h3>
-        <table class="table table-striped">
-          <thead>
-            <tr>
-              <th>Rank</th>
-              <th>Spelare</th>
-              <th>Lag</th>
-              <th>{{ categoryLabels[category] }}</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr v-for="(leader, index) in leaders.slice(0, rowCounters[category])" :key="index">
-              <td>{{ leader.rank }}</td>
-              <td>{{ leader.name }}</td>
-              <td>{{ leader.team }}</td>
-              <td>{{ leader.value }}</td>
-            </tr>
-          </tbody>
-        </table>
-        <BButton @click="showMore(category)" v-if="rowCounters[category] < maxRows">
-          Visa fler
-        </BButton>
-      </div>
-    </div>
-  </div>
+  <BContainer class="bv-example-row">
+    <BRow>
+      <BCol lg="12">
+        <h2>Topplistor</h2>
+      </BCol>
+    </BRow>
+    <BRow>
+      <BCol v-for="(leaders, category) in leaderData" :key="category" cols="12" lg="4">
+        <div class="table-leaders">
+          <h3>{{ categoryLabels[category] }}</h3>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Rank</th>
+                <th>Spelare</th>
+                <th>Lag</th>
+                <th>{{ categoryLabels[category] }}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="(leader, index) in leaders.slice(0, rowCounters[category])" :key="index">
+                <td>{{ leader.rank }}</td>
+                <td>{{ leader.name }}</td>
+                <td>{{ leader.team }}</td>
+                <td>{{ leader.value }}</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="d-grid gap-2">
+            <BButton @click="showMore(category)" v-if="rowCounters[category] < maxRows">
+              Visa fler
+              <i class="bi bi-chevron-down"></i>
+            </BButton>
+          </div>
+        </div>
+      </BCol>
+    </BRow>
+  </BContainer>
 </template>
 
 <style scoped>
@@ -84,7 +93,7 @@ onMounted(fetchLeaders)
   display: flex;
   justify-content: space-evenly;
 }
-.table-leaders {
-  width: 33%;
+button {
+  border-radius: 0;
 }
 </style>

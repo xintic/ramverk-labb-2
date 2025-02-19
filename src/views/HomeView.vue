@@ -12,19 +12,13 @@ import StandingsShl from '@/components/StandingsShl.vue'
   <section id="standings">
     <BContainer class="bv-example-row">
       <BRow>
-        <BCol lg="8"><StandingsShl /></BCol>
-        <BCol lg="4"><RoundShl /></BCol>
+        <BCol cols="12" lg="8"><StandingsShl /></BCol>
+        <BCol cols="12" lg="4"><RoundShl /></BCol>
       </BRow>
     </BContainer>
   </section>
   <section id="leaders">
-    <BContainer class="bv-example-row">
-      <BRow>
-        <BCol lg="12">
-          <LeadersShl />
-        </BCol>
-      </BRow>
-    </BContainer>
+    <LeadersShl />
   </section>
 </template>
 

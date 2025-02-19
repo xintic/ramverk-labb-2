@@ -110,9 +110,6 @@ onMounted(fetchMatches)
 </template>
 
 <style scoped>
-#games {
-  margin-top: 2.45rem;
-}
 .header-container {
   display: flex;
   align-items: center;

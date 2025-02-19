@@ -1,13 +1,30 @@
 <script setup>
-import LeadersHa from '@/components/LeadersHa.vue'
-import RoundHa from '@/components/RoundHa.vue'
+import NavbarComponent from '@/components/NavbarComponent.vue'
+import CarouselComponent from '@/components/CarouselComponent.vue'
 import StandingsHa from '@/components/StandingsHa.vue'
+import RoundHa from '@/components/RoundHa.vue'
+import LeadersHa from '@/components/LeadersHa.vue'
 </script>
 
 <template>
-  <StandingsHa />
-  <RoundHa />
-  <LeadersHa />
+  <NavbarComponent />
+  <CarouselComponent />
+  <section id="standings">
+    <BContainer class="bv-example-row">
+      <BRow>
+        <BCol cols="12" lg="8"><StandingsHa /></BCol>
+        <BCol cols="12" lg="4"><RoundHa /></BCol>
+      </BRow>
+    </BContainer>
+  </section>
+  <section id="leaders">
+    <LeadersHa />
+  </section>
 </template>
 
-<style scoped></style>
+<style scoped>
+#standings {
+  display: flex;
+  justify-content: center;
+}
+</style>
