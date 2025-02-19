@@ -75,24 +75,28 @@ onMounted(fetchMatches)
         :key="match.sport_event.id"
         class="match"
       >
-        <div class="team-home">
-          <img
-            :src="`src/images/shl/${match.sport_event.competitors[0].abbreviation}.svg`"
-            class="competitor-logo"
-          />
-          <div class="competitor-name">{{ match.sport_event.competitors[0].name }}</div>
+        <div class="team">
+          <div class="team-wrapper">
+            <img
+              :src="`src/images/shl/${match.sport_event.competitors[0].abbreviation}.svg`"
+              class="competitor-logo"
+            />
+            <div class="competitor-name">{{ match.sport_event.competitors[0].name }}</div>
+          </div>
           <div class="competitor-score">
             {{
               getScore(match.sport_event_status?.home_score, match.sport_event.start_time, 'date')
             }}
           </div>
         </div>
-        <div class="team-away">
-          <img
-            :src="`src/images/shl/${match.sport_event.competitors[1].abbreviation}.svg`"
-            class="competitor-logo"
-          />
-          <div class="competitor-name">{{ match.sport_event.competitors[1].name }}</div>
+        <div class="team">
+          <div class="team-wrapper">
+            <img
+              :src="`src/images/shl/${match.sport_event.competitors[1].abbreviation}.svg`"
+              class="competitor-logo"
+            />
+            <div class="competitor-name">{{ match.sport_event.competitors[1].name }}</div>
+          </div>
           <div class="competitor-score">
             {{
               getScore(match.sport_event_status?.away_score, match.sport_event.start_time, 'time')
@@ -107,12 +111,39 @@ onMounted(fetchMatches)
 <style scoped>
 .header-container {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.team-home,
-.team-away {
+.header-container h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.match {
   display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+.team {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.team-wrapper {
+  display: flex;
+  align-items: center;
 }
 .competitor-logo {
-  height: 1.5em;
+  height: 2rem;
+  width: 2rem;
+  margin-right: 5px;
+}
+.competitor-socre {
+  display: flex;
+}
+.winner {
+  font-weight: 700;
+}
+.upcoming {
+  color: #888;
 }
 </style>
