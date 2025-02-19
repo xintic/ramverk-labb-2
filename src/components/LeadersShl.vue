@@ -51,7 +51,7 @@ onMounted(fetchLeaders)
   <div>
     <h2>Topplistor</h2>
     <div class="leaders">
-      <div v-for="(leaders, category) in leaderData" :key="category">
+      <div v-for="(leaders, category) in leaderData" :key="category" class="table-leaders">
         <h3>{{ categoryLabels[category] }}</h3>
         <table class="table table-striped">
           <thead>
@@ -83,5 +83,8 @@ onMounted(fetchLeaders)
 .leaders {
   display: flex;
   justify-content: space-evenly;
+}
+.table-leaders {
+  width: 33%;
 }
 </style>
