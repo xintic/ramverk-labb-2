@@ -1,5 +1,6 @@
 <script setup>
 import NavbarComponent from '@/components/NavbarComponent.vue'
+import HeroComponent from '@/components/HeroComponent.vue'
 import StandingsHa from '@/components/StandingsHa.vue'
 import RoundHa from '@/components/RoundHa.vue'
 import LeadersHa from '@/components/LeadersHa.vue'
@@ -7,6 +8,9 @@ import LeadersHa from '@/components/LeadersHa.vue'
 
 <template>
   <NavbarComponent />
+  <section id="hero">
+    <HeroComponent />
+  </section>
   <section id="standings">
     <BContainer class="bv-example-row">
       <BRow>
@@ -21,8 +25,18 @@ import LeadersHa from '@/components/LeadersHa.vue'
 </template>
 
 <style scoped>
+#hero {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
 #standings {
   display: flex;
   justify-content: center;
+  margin-bottom: 5rem;
+}
+#leaders {
+  margin-bottom: 5rem;
 }
 </style>

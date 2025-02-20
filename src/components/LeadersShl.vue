@@ -50,11 +50,6 @@ onMounted(fetchLeaders)
 <template>
   <BContainer class="bv-example-row">
     <BRow>
-      <BCol lg="12">
-        <h2>Topplistor</h2>
-      </BCol>
-    </BRow>
-    <BRow>
       <BCol v-for="(leaders, category) in leaderData" :key="category" cols="12" lg="4">
         <div class="table-leaders">
           <h3>{{ categoryLabels[category] }}</h3>
