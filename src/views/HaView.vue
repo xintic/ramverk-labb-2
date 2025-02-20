@@ -1,6 +1,5 @@
 <script setup>
 import NavbarComponent from '@/components/NavbarComponent.vue'
-import CarouselComponent from '@/components/CarouselComponent.vue'
 import StandingsHa from '@/components/StandingsHa.vue'
 import RoundHa from '@/components/RoundHa.vue'
 import LeadersHa from '@/components/LeadersHa.vue'
@@ -8,7 +7,6 @@ import LeadersHa from '@/components/LeadersHa.vue'
 
 <template>
   <NavbarComponent />
-  <CarouselComponent />
   <section id="standings">
     <BContainer class="bv-example-row">
       <BRow>

@@ -1,14 +1,12 @@
 <script setup>
-import CarouselComponent from '@/components/CarouselComponent.vue'
-import LeadersShl from '@/components/LeadersShl.vue'
 import NavbarComponent from '@/components/NavbarComponent.vue'
-import RoundShl from '@/components/RoundShl.vue'
 import StandingsShl from '@/components/StandingsShl.vue'
+import RoundShl from '@/components/RoundShl.vue'
+import LeadersShl from '@/components/LeadersShl.vue'
 </script>
 
 <template>
   <NavbarComponent />
-  <CarouselComponent />
   <section id="standings">
     <BContainer class="bv-example-row">
       <BRow>
