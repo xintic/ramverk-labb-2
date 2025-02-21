@@ -40,6 +40,7 @@ import NavbarComponent from '@/components/NavbarComponent.vue'
 }
 .title {
   font-size: 8rem;
+  font-weight: 700;
 }
 .subtitle {
   font-size: 1.5rem;
