@@ -49,10 +49,10 @@ defineProps({
       </div>
     </BRow>
     <BRow>
-      <BCol cols="6" lg="3">
+      <BCol cols="6" lg="3" class="subtitle-container">
         <div class="subtitle">
-          <div>
-            <span class="sub-title">
+          <div class="sub-title">
+            <span>
               {{ number_1 }}
             </span>
           </div>
@@ -63,10 +63,10 @@ defineProps({
           </div>
         </div>
       </BCol>
-      <BCol cols="6" lg="3">
+      <BCol cols="6" lg="3" class="subtitle-container">
         <div class="subtitle">
-          <div>
-            <span class="sub-title">
+          <div class="sub-title">
+            <span>
               {{ number_2 }}
             </span>
           </div>
@@ -77,10 +77,10 @@ defineProps({
           </div>
         </div>
       </BCol>
-      <BCol cols="6" lg="3">
+      <BCol cols="6" lg="3" class="subtitle-container">
         <div class="subtitle">
-          <div>
-            <span class="sub-title">
+          <div class="sub-title">
+            <span>
               {{ number_3 }}
             </span>
           </div>
@@ -91,10 +91,10 @@ defineProps({
           </div>
         </div>
       </BCol>
-      <BCol cols="6" lg="3">
+      <BCol cols="6" lg="3" class="subtitle-container">
         <div class="subtitle">
-          <div>
-            <span class="sub-title">
+          <div class="sub-title">
+            <span>
               {{ number_4 }}
             </span>
           </div>
@@ -113,7 +113,19 @@ defineProps({
 .title {
   display: flex;
   justify-content: center;
+  text-align: center;
   margin-bottom: 5rem;
+}
+.subtitle-container {
+  border-left-width: 1px;
+  border-top-width: 0px;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  border-style: solid;
+  border-left-color: rgba(34, 37, 41, 0.75);
+}
+.subtitle-container:first-child {
+  border: none;
 }
 .subtitle {
   display: flex;
@@ -123,5 +135,10 @@ defineProps({
 }
 .sub-title {
   font-size: 3rem;
+}
+@media (max-width: 576px) {
+  .subtitle-container:nth-child(odd) {
+    border: none;
+  }
 }
 </style>

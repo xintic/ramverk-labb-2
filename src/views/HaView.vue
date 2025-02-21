@@ -4,12 +4,25 @@ import HeroComponent from '@/components/HeroComponent.vue'
 import StandingsHa from '@/components/StandingsHa.vue'
 import RoundHa from '@/components/RoundHa.vue'
 import LeadersHa from '@/components/LeadersHa.vue'
+import FooterComponent from '@/components/FooterComponent.vue'
 </script>
 
 <template>
-  <NavbarComponent />
+  <section id="navbar">
+    <NavbarComponent />
+  </section>
   <section id="hero">
-    <HeroComponent />
+    <HeroComponent
+      title="SVERIGES MEST UNDERHÅLLANDE LIGA"
+      :number_1="14"
+      subtitle_1="LAG"
+      :number_2="52"
+      subtitle_2="OMGÅNGAR"
+      :number_3="364"
+      subtitle_3="MATCHER"
+      :number_4="1"
+      subtitle_4="VINNARE"
+    />
   </section>
   <section id="standings">
     <BContainer class="bv-example-row">
@@ -22,14 +35,18 @@ import LeadersHa from '@/components/LeadersHa.vue'
   <section id="leaders">
     <LeadersHa />
   </section>
+  <section id="footer">
+    <FooterComponent />
+  </section>
 </template>
 
 <style scoped>
 #hero {
   display: flex;
   justify-content: center;
-  margin-top: 5rem;
-  margin-bottom: 5rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  margin-bottom: 2rem;
 }
 #standings {
   display: flex;

@@ -72,7 +72,12 @@ onMounted(fetchLeaders)
             </tbody>
           </table>
           <div class="d-grid gap-2">
-            <BButton @click="showMore(category)" v-if="rowCounters[category] < maxRows">
+            <BButton
+              squared
+              variant="dark"
+              @click="showMore(category)"
+              v-if="rowCounters[category] < maxRows"
+            >
               Visa fler
               <i class="bi bi-chevron-down"></i>
             </BButton>
@@ -87,8 +92,5 @@ onMounted(fetchLeaders)
 .leaders {
   display: flex;
   justify-content: space-evenly;
-}
-button {
-  border-radius: 0;
 }
 </style>

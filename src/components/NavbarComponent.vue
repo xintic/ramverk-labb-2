@@ -1,5 +1,5 @@
 <template>
-  <BNavbar v-b-color-mode="'dark'" toggleable="lg" variant="secondary">
+  <BNavbar v-b-color-mode="'dark'" toggleable="lg" variant="dark">
     <BNavbarBrand to="/"
       ><img
         src="../images/startpage/hockeylogo.png"

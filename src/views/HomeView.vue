@@ -1,42 +1,35 @@
 <script setup>
 import NavbarComponent from '@/components/NavbarComponent.vue'
-import HeroComponent from '@/components/HeroComponent.vue'
-import StandingsShl from '@/components/StandingsShl.vue'
-import RoundShl from '@/components/RoundShl.vue'
-import LeadersShl from '@/components/LeadersShl.vue'
 </script>
 
 <template>
-  <NavbarComponent />
-  <section id="hero">
-    <HeroComponent />
-  </section>
-  <section id="standings">
-    <BContainer class="bv-example-row">
-      <BRow>
-        <BCol cols="12" lg="8"><StandingsShl /></BCol>
-        <BCol cols="12" lg="4"><RoundShl /></BCol>
-      </BRow>
-    </BContainer>
-  </section>
-  <section id="leaders">
-    <LeadersShl />
+  <div class="background-wrapper">
+    <section id="navbar">
+      <NavbarComponent />
+    </section>
+    <section id="hero"></section>
+  </div>
+  <section id="footer">
+    <FooterComponent />
   </section>
 </template>
 
 <style scoped>
-#hero {
-  display: flex;
-  justify-content: center;
-  margin-top: 5rem;
-  margin-bottom: 5rem;
+.background-wrapper {
+  height: 100vh;
+  background-image: url(../images/startpage/hovet.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
 }
-#standings {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 5rem;
+#footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }
-#leaders {
-  margin-bottom: 5rem;
+::v-deep(.text-body-secondary) {
+  color: white !important;
 }
 </style>

@@ -56,14 +56,15 @@ onMounted(fetchMatches)
 <template>
   <div id="games">
     <div class="header-container">
-      <BButton @click="prevRound" :disabled="currentRoundIndex === 0" variant="secondary">
+      <BButton squared @click="prevRound" :disabled="currentRoundIndex === 0" variant="dark">
         <i class="bi bi-arrow-left"></i>
       </BButton>
       <h2>Omgång {{ rounds[currentRoundIndex]?.round }}</h2>
       <BButton
+        squared
         @click="nextRound"
         :disabled="currentRoundIndex === rounds.length - 1"
-        variant="secondary"
+        variant="dark"
       >
         <i class="bi bi-arrow-right"></i>
       </BButton>
