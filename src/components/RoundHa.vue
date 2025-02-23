@@ -1,8 +1,10 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, computed } from 'vue'
+import { useThemeStore } from '@/stores/ThemeStore'
 import axios from 'axios'
-import { BButton } from 'bootstrap-vue-next'
 
+const themeStore = useThemeStore()
+const buttonVariant = computed(() => (themeStore.isDarkMode ? 'dark' : 'secondary'))
 const rounds = ref([])
 const currentRoundIndex = ref(0)
 
@@ -57,7 +59,12 @@ onMounted(fetchMatches)
 <template>
   <div id="games">
     <div class="header-container">
-      <BButton squared @click="prevRound" :disabled="currentRoundIndex === 0" variant="dark">
+      <BButton
+        squared
+        @click="prevRound"
+        :disabled="currentRoundIndex === 0"
+        :variant="buttonVariant"
+      >
         <i class="bi bi-arrow-left"></i>
       </BButton>
       <h2>Omgång {{ rounds[currentRoundIndex]?.round }}</h2>
@@ -65,7 +72,7 @@ onMounted(fetchMatches)
         squared
         @click="nextRound"
         :disabled="currentRoundIndex === rounds.length - 1"
-        variant="dark"
+        :variant="buttonVariant"
       >
         <i class="bi bi-arrow-right"></i>
       </BButton>

@@ -44,9 +44,9 @@ import FooterComponent from '@/components/FooterComponent.vue'
 #hero {
   display: flex;
   justify-content: center;
+  margin-top: 3.625rem;
   padding-top: 5rem;
-  padding-bottom: 5rem;
-  margin-bottom: 2rem;
+  padding-bottom: 10rem;
 }
 #standings {
   display: flex;

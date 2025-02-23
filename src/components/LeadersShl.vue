@@ -1,7 +1,10 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, computed } from 'vue'
+import { useThemeStore } from '@/stores/ThemeStore'
 import axios from 'axios'
 
+const themeStore = useThemeStore()
+const buttonVariant = computed(() => (themeStore.isDarkMode ? 'dark' : 'secondary'))
 const leaderData = ref({})
 const categoryLabels = {
   points: 'Poäng',
@@ -74,7 +77,7 @@ onMounted(fetchLeaders)
           <div class="d-grid gap-2">
             <BButton
               squared
-              variant="dark"
+              :variant="buttonVariant"
               @click="showMore(category)"
               v-if="rowCounters[category] < maxRows"
             >

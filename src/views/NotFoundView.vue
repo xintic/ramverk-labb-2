@@ -9,7 +9,7 @@ import NavbarComponent from '@/components/NavbarComponent.vue'
     <div class="error-text">
       <span class="title">404</span>
       <span class="subtitle">Här finns ingenting än...</span>
-      <BLink class="btn btn-dark" to="/">Tillbaka</BLink>
+      <BLink class="btn btn-dark btn-lg" to="/">Tillbaka</BLink>
     </div>
   </div>
   <section id="footer">

@@ -11,6 +11,7 @@ import FooterComponent from '@/components/FooterComponent.vue'
   <section id="navbar">
     <NavbarComponent />
   </section>
+
   <section id="hero">
     <HeroComponent
       title="SVERIGES MEST UNDERHÅLLANDE LIGA"
@@ -44,6 +45,7 @@ import FooterComponent from '@/components/FooterComponent.vue'
 #hero {
   display: flex;
   justify-content: center;
+  margin-top: 3.625rem;
   padding-top: 5rem;
   padding-bottom: 10rem;
 }

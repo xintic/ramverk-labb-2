@@ -1,5 +1,8 @@
+<script setup>
+import ThemeComponent from './ThemeComponent.vue'
+</script>
 <template>
-  <BNavbar v-b-color-mode="'dark'" toggleable="lg" variant="dark">
+  <BNavbar v-b-color-mode="'dark'" toggleable="lg" variant="dark" fixed="top">
     <BNavbarBrand to="/"
       ><img
         src="../images/startpage/hockeylogo.png"
@@ -7,6 +10,7 @@
         alt="logo"
       />Hockeystatistik</BNavbarBrand
     >
+    <ThemeComponent />
     <BNavbarToggle target="nav-collapse" />
     <BCollapse id="nav-collapse" is-nav>
       <BNavbarNav class="ms-auto mb-2 mb-lg-0">
