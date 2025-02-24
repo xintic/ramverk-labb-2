@@ -4,7 +4,7 @@ import { useThemeStore } from '@/stores/ThemeStore'
 import axios from 'axios'
 
 const themeStore = useThemeStore()
-const buttonVariant = computed(() => (themeStore.isDarkMode ? 'dark' : 'secondary'))
+const buttonVariant = computed(() => (themeStore.isDarkMode ? 'secondary' : 'dark'))
 const leaderData = ref({})
 const categoryLabels = {
   points: 'Poäng',
