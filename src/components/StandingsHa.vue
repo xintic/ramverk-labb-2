@@ -63,7 +63,7 @@ onUnmounted(() => {
         </td>
         <td>
           <img
-            :src="`src/images/hockeyallsvenskan/${team.competitor.abbreviation}.svg`"
+            :src="`src/assets/images/hockeyallsvenskan/${team.competitor.abbreviation}.svg`"
             :alt="team.competitor.name"
             class="team-logo"
           />

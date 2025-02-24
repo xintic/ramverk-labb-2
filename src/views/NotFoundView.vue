@@ -23,7 +23,7 @@ import FooterComponent from '@/components/FooterComponent.vue'
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-image: url(../images/error-page/McCauley404.webp);
+  background-image: url(../assets/images/error-page/McCauley404.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;

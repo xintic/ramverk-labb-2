@@ -13,10 +13,10 @@
           </div>
           <div class="d-grid gap-2">
             <BLink class="btn btn-secondary rounded-0 btn-lg" to="/shl"
-              ><img src="../images/shl/SHL.svg" alt="SHL Logo"
+              ><img src="../assets/images/shl/SHL.svg" alt="SHL Logo"
             /></BLink>
             <BLink class="btn btn-secondary rounded-0 btn-lg" to="/hockeyallsvenskan"
-              ><img src="../images/hockeyallsvenskan/HA.svg" alt="Hockeyallsvenskan Logo"
+              ><img src="../assets/images/hockeyallsvenskan/HA.svg" alt="Hockeyallsvenskan Logo"
             /></BLink>
           </div>
         </div>
@@ -31,7 +31,7 @@
 <style scoped>
 .background-wrapper {
   height: 100vh;
-  background-image: url(../images/startpage/hovet.webp);
+  background-image: url(../assets/images/startpage/hovet.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;

@@ -63,7 +63,7 @@ onUnmounted(() => {
         </td>
         <td>
           <img
-            :src="`src/images/shl/${team.competitor.abbreviation}.svg`"
+            :src="`src/assets/images/shl/${team.competitor.abbreviation}.svg`"
             :alt="team.competitor.name"
             class="team-logo"
           />

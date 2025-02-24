@@ -5,7 +5,7 @@ import ThemeComponent from './ThemeComponent.vue'
   <BNavbar v-b-color-mode="'dark'" toggleable="lg" variant="dark" fixed="top">
     <BNavbarBrand to="/"
       ><img
-        src="../images/startpage/hockeylogo.png"
+        src="../assets/images/startpage/hockeylogo.png"
         class="d-inline-block align-top"
         alt="logo"
       />Hockeystatistik</BNavbarBrand

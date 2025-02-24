@@ -87,7 +87,7 @@ onMounted(fetchMatches)
         <div class="team">
           <div class="team-wrapper">
             <img
-              :src="`src/images/hockeyallsvenskan/${match.sport_event.competitors[0].abbreviation}.svg`"
+              :src="`src/assets/images/hockeyallsvenskan/${match.sport_event.competitors[0].abbreviation}.svg`"
               class="competitor-logo"
             />
             <div class="competitor-name">{{ match.sport_event.competitors[0].name }}</div>
@@ -101,7 +101,7 @@ onMounted(fetchMatches)
         <div class="team">
           <div class="team-wrapper">
             <img
-              :src="`src/images/hockeyallsvenskan/${match.sport_event.competitors[1].abbreviation}.svg`"
+              :src="`src/assets/images/hockeyallsvenskan/${match.sport_event.competitors[1].abbreviation}.svg`"
               class="competitor-logo"
             />
             <div class="competitor-name">{{ match.sport_event.competitors[1].name }}</div>
