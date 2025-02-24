@@ -1,5 +1,4 @@
 <script setup>
-import NavbarComponent from '@/components/NavbarComponent.vue'
 import HeroComponent from '@/components/HeroComponent.vue'
 import StandingsHa from '@/components/StandingsHa.vue'
 import RoundHa from '@/components/RoundHa.vue'
@@ -8,9 +7,6 @@ import FooterComponent from '@/components/FooterComponent.vue'
 </script>
 
 <template>
-  <section id="navbar">
-    <NavbarComponent />
-  </section>
   <section id="hero">
     <HeroComponent
       title="SVERIGES MEST UNDERHÅLLANDE LIGA"

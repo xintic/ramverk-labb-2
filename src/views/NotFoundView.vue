@@ -1,17 +1,17 @@
 <script setup>
 import FooterComponent from '@/components/FooterComponent.vue'
-import NavbarComponent from '@/components/NavbarComponent.vue'
 </script>
 
 <template>
-  <NavbarComponent />
-  <div class="background-wrapper">
-    <div class="error-text">
-      <span class="title">404</span>
-      <span class="subtitle">Här finns ingenting än...</span>
-      <BLink class="btn btn-dark btn-lg" to="/">Tillbaka</BLink>
+  <section id="main">
+    <div class="background-wrapper">
+      <div class="error-text">
+        <span class="title">404</span>
+        <span class="subtitle">Här finns ingenting än...</span>
+        <BLink class="btn btn-dark btn-lg" to="/">Tillbaka</BLink>
+      </div>
     </div>
-  </div>
+  </section>
   <section id="footer">
     <FooterComponent />
   </section>
@@ -38,6 +38,9 @@ import NavbarComponent from '@/components/NavbarComponent.vue'
   background-color: rgba(255, 255, 255, 0.75);
   padding: 1.5rem;
 }
+::v-deep(.error-text) {
+  color: rgb(33, 37, 41) !important;
+}
 .title {
   font-size: 8rem;
   font-weight: 700;
@@ -54,6 +57,12 @@ import NavbarComponent from '@/components/NavbarComponent.vue'
   left: 0;
   bottom: 0;
   width: 100%;
+}
+::v-deep(.text-body-secondary) {
+  color: rgb(73, 80, 87) !important;
+}
+::v-deep(.border-top) {
+  border-color: rgb(73, 80, 87) !important;
 }
 @media (max-width: 576px) {
   .subtitle {

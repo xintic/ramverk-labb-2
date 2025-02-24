@@ -1,12 +1,7 @@
-<script setup>
-import NavbarComponent from '@/components/NavbarComponent.vue'
-</script>
+<script setup></script>
 
 <template>
   <div class="background-wrapper">
-    <section id="navbar">
-      <NavbarComponent />
-    </section>
     <section id="hero">
       <div class="hero-wrapper">
         <div class="hero-text">
