@@ -1,16 +1,3 @@
-<template>
-  <div class="form-check form-switch">
-    <input
-      class="form-check-input p-2 me-3"
-      type="checkbox"
-      role="switch"
-      v-model="isDarkMode"
-      @change="toggleTheme"
-    />
-    <i :class="themeIcon"></i>
-  </div>
-</template>
-
 <script setup>
 import { computed, onMounted } from 'vue'
 import { useThemeStore } from '@/stores/ThemeStore'
@@ -30,6 +17,20 @@ onMounted(() => {
   document.body.dataset.bsTheme = themeStore.theme
 })
 </script>
+
+<template>
+  <div class="form-check form-switch">
+    <input
+      class="form-check-input p-2 me-3"
+      id="themeToggle"
+      type="checkbox"
+      role="switch"
+      v-model="isDarkMode"
+      @change="toggleTheme"
+    />
+    <i :class="themeIcon"></i>
+  </div>
+</template>
 
 <style scoped>
 .bi {

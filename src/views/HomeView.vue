@@ -51,7 +51,7 @@ import NavbarComponent from '@/components/NavbarComponent.vue'
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 22vw;
+  width: 30rem;
 }
 .hero-text {
   background-color: rgba(0, 0, 0, 0.75);
@@ -77,6 +77,9 @@ import NavbarComponent from '@/components/NavbarComponent.vue'
 }
 ::v-deep(.text-body-secondary) {
   color: white !important;
+}
+::v-deep(.border-top) {
+  border-color: white !important;
 }
 @media (max-width: 576px) {
   .hero-wrapper {
